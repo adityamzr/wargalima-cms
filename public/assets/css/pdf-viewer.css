@@ -1,0 +1,22 @@
+/**
+ * PDF Viewer Styles
+ * Hides the toolbar in PDF viewers
+ */
+
+/* Hide toolbar in PDF viewer iframe */
+.pdf-viewer-no-toolbar {
+  border: none;
+}
+
+/* This targets the PDF viewer toolbar */
+.pdf-viewer-no-toolbar::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Additional styling to ensure the PDF takes up the full space */
+.pdf-viewer-no-toolbar {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

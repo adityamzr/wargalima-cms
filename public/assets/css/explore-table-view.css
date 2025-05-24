@@ -1,0 +1,113 @@
+/**
+ * Explore Table View Styles
+ */
+
+/* Table view container */
+.table-view-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Table styles */
+.table-view {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+/* Table header */
+.table-view thead {
+  background-color: #f9fafb;
+}
+
+.table-view th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+/* Table rows */
+.table-view tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-view tbody tr:hover {
+  background-color: #f3f4f6;
+  cursor: pointer;
+}
+
+/* Table cells */
+.table-view td {
+  padding: 12px 16px;
+  vertical-align: middle;
+}
+
+/* Column widths */
+.name-column {
+  width: 45%;
+}
+
+.date-column {
+  width: 20%;
+}
+
+.type-column {
+  width: 15%;
+}
+
+.creator-column {
+  width: 20%;
+}
+
+/* File info styling */
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-icon i {
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #111827;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+
+
+/* Hide table view by default */
+.table-view-container {
+  display: none;
+}
+
+/* Show table view when in table-view mode */
+#content-container.table-view .table-view-container {
+  display: block;
+}
+
+/* Hide other views when in table-view mode */
+#content-container.table-view .gallery-item {
+  display: none;
+}

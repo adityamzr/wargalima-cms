@@ -1,0 +1,83 @@
+/* Sidebar Styles */
+.menu-item.active > .menu-link {
+  background-color: #f3f4f6;
+}
+
+.dark .menu-item.active > .menu-link {
+  background-color: #374151;
+}
+
+.menu-link {
+  transition: all 0.2s ease;
+}
+
+.menu-link:hover {
+  background-color: #f3f4f6;
+}
+
+.dark .menu-link:hover {
+  background-color: #374151;
+}
+
+/* Submenu styles */
+[id$="-submenu"] {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin-left: 0.5rem;
+}
+
+[id$="-submenu"].hidden {
+  display: block !important;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+[id$="-submenu"]:not(.hidden) {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Mobile sidebar overlay */
+#sidebar-overlay {
+  transition: opacity 0.3s ease;
+}
+
+/* Main content area adjustments */
+@media (min-width: 1024px) {
+  .ml-sidebar {
+    margin-left: 250px;
+  }
+}
+
+/* Sidebar transition */
+#sidebar {
+  transition: transform 0.3s ease;
+}
+
+/* Submenu item styles */
+.pl-8 .menu-link {
+  position: relative;
+  transition: background-color 0.2s ease;
+  padding-left: 1.25rem !important;
+}
+
+/* Add subtle indicator for active submenu items */
+.pl-8 .menu-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #9ca3af; /* Gray-400 */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.pl-8 .menu-link:hover::before,
+.pl-8 .bg-gray-50::before {
+  opacity: 1;
+}
