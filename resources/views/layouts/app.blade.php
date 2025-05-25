@@ -31,8 +31,11 @@
   <link href="{{url('')}}/assets/vendors/keenicons/styles.bundle.css" rel="stylesheet"/>
   <link href="{{url('')}}/assets/css/styles.css" rel="stylesheet"/>
   @vite('resources/css/app.scss')
+  @notifyCss
  </head>
  <body class="antialiased flex h-full text-base text-gray-700 [--tw-page-bg:#fefefe] [--tw-page-bg-dark:var(--tw-coal-500)] demo1 sidebar-fixed header-fixed bg-[--tw-page-bg] dark:bg-[--tw-page-bg-dark]">
+  {{-- @include('notify::components.notify') --}}
+  <x-notify::notify class="z-50"/>
   <!-- Theme Mode -->
   <script>
    const defaultThemeMode = 'light'; // light|dark|system
@@ -87,6 +90,7 @@
   <script src="{{ url('') }}/assets/js/layouts/demo1.js">
   </script>
   <!-- End of Scripts -->
+  @notifyJs
   @vite('resources/js/app.js')
  </body>
 </html>

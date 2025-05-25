@@ -19,6 +19,7 @@ class AuthController extends Controller
             $credentials = $request->only(['username', 'password']);
             if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
+                notify()->success('Selamat Datang di Wargalima CMS!');
                 return redirect('/dashboard');
             }
 
