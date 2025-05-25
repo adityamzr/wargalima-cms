@@ -2,7 +2,7 @@
 <html class="h-full" data-theme="true" data-theme-mode="light" dir="ltr" lang="en">
  <head><base href="../../../../../">
   <title>
-   Wargalima - CMS
+   @yield('title', 'Wargalima CMS')
   </title>
   <meta charset="utf-8"/>
   <meta content="follow, index" name="robots"/>

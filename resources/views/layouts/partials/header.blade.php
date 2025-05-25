@@ -1272,9 +1272,10 @@
         </div>
         </div>
         <div class="menu-item px-4 py-1.5">
-          <a class="btn btn-sm btn-light justify-center" href="">
-            Log out
-          </a>
+          <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button class="btn btn-sm btn-light justify-center w-full" type="submit">Log out</button>
+          </form>
         </div>
       </div>
       </div>
