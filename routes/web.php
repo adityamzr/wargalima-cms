@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function() {
-    return view('layouts.app');
+    return view('pages.dashboard.index');
 });
