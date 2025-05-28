@@ -10,23 +10,6 @@
          Keenthemes Inc.
         </a>
        </div>
-       <nav class="flex order-1 md:order-2 gap-4 font-normal text-2sm text-gray-600">
-        <a class="hover:text-primary" href="https://keenthemes.com/metronic/tailwind/docs">
-         Docs
-        </a>
-        <a class="hover:text-primary" href="https://1.envato.market/Vm7VRE">
-         Purchase
-        </a>
-        <a class="hover:text-primary" href="https://keenthemes.com/metronic/tailwind/docs/getting-started/license">
-         FAQ
-        </a>
-        <a class="hover:text-primary" href="https://devs.keenthemes.com">
-         Support
-        </a>
-        <a class="hover:text-primary" href="https://keenthemes.com/metronic/tailwind/docs/getting-started/license">
-         License
-        </a>
-       </nav>
       </div>
      </div>
      <!-- End of Container -->

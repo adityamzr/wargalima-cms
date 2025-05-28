@@ -71,6 +71,29 @@
   </script>
   <script src="{{ url('') }}/assets/vendors/apexcharts/apexcharts.min.js">
   </script>
+  <script src="{{ url('') }}/assets/js/jquery/jquery3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      }
+    });
+  </script>
+  @if (session('status'))
+    <script>
+      Toast.fire({
+        icon: '{{ session('status') }}',
+        title: '{{ session('message') }}'
+      });
+    </script>
+  @endif
   <!-- End of Scripts -->
   @vite('resources/js/app.js')
  </body>

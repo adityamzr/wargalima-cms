@@ -19,11 +19,16 @@ class AuthController extends Controller
             $credentials = $request->only(['username', 'password']);
             if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
-                notify()->success('Selamat Datang di Wargalima CMS!');
-                return redirect('/dashboard');
+                return redirect('/dashboard')->with([
+                    'status' => 'success',
+                    'message' => 'Selamat datang admin!',
+                ]);
             }
 
-            return back()->with('error', 'Invalid credentials.');
+            return back()->with([
+                'status' => 'error',
+                'message' => 'Username atau password salah!',
+            ]);
         } catch (\Exception $e) {
             Log::error('Login error: ' . $e->getMessage());
 

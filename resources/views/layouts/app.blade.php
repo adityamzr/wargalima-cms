@@ -2,7 +2,7 @@
 <html class="h-full" data-theme="true" data-theme-mode="light" dir="ltr" lang="en">
  <head><base href="../../">
   <title>
-   @yield('title', 'Wargalima CMS')
+   @yield('title') - Wargalima CMS
   </title>
   <meta charset="utf-8"/>
   <meta content="follow, index" name="robots"/>
@@ -22,6 +22,9 @@
   <meta content="Metronic - Tailwind CSS " property="og:title"/>
   <meta content="" property="og:description"/>
   <meta content="assets/media/app/og-image.png" property="og:image"/>
+  <link href="{{ url('') }}/assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+  <link href="{{ url('') }}/assets/fontawesome/css/brands.css" rel="stylesheet" />
+  <link href="{{ url('') }}/assets/fontawesome/css/solid.css" rel="stylesheet" />
   <link href="{{url('')}}/assets/media/app/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
   <link href="{{url('')}}/assets/media/app/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
   <link href="{{url('')}}/assets/media/app/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
@@ -31,11 +34,8 @@
   <link href="{{url('')}}/assets/vendors/keenicons/styles.bundle.css" rel="stylesheet"/>
   <link href="{{url('')}}/assets/css/styles.css" rel="stylesheet"/>
   @vite('resources/css/app.scss')
-  @notifyCss
  </head>
  <body class="antialiased flex h-full text-base text-gray-700 [--tw-page-bg:#fefefe] [--tw-page-bg-dark:var(--tw-coal-500)] demo1 sidebar-fixed header-fixed bg-[--tw-page-bg] dark:bg-[--tw-page-bg-dark]">
-  {{-- @include('notify::components.notify') --}}
-  <x-notify::notify class="z-50"/>
   <!-- Theme Mode -->
   <script>
    const defaultThemeMode = 'light'; // light|dark|system
@@ -89,8 +89,32 @@
   </script>
   <script src="{{ url('') }}/assets/js/layouts/demo1.js">
   </script>
+  <script src="{{ url('') }}/assets/js/jquery/jquery3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      }
+    });
+  </script>
+  @if (session('status'))
+    <script>
+      Toast.fire({
+        icon: '{{ session('status') }}',
+        title: '{{ session('message') }}'
+      });
+    </script>
+  @endif
+  @stack('scripts')
   <!-- End of Scripts -->
-  @notifyJs
   @vite('resources/js/app.js')
  </body>
 </html>

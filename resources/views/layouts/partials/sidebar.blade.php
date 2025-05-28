@@ -323,6 +323,22 @@
          </div>
         </div>
        </div>
+       <div class="menu-item">
+        <a class="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="{{ route('family') }}" tabindex="0">
+         <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
+          <i class="ki-filled ki-users text-lg">
+          </i>
+         </span>
+         <span class="menu-title text-sm font-medium text-gray-800">
+          Keluarga
+         </span>
+         <span class="menu-badge me-[-10px]">
+          <span class="badge badge-xs">
+           Soon
+          </span>
+         </span>
+        </a>
+       </div>
        <div class="menu-item pt-2.25 pb-px">
         <span class="menu-heading uppercase text-2sm font-medium text-gray-500 ps-[10px] pe-[10px]">
          Apps

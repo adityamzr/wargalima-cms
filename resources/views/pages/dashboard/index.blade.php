@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard - Wargalima CMS')
+@section('title', 'Dashboard')
 
 @section('content')
     <main class="grow content pt-5" id="content" role="content">
