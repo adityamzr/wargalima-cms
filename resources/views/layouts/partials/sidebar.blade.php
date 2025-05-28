@@ -52,10 +52,10 @@
        </div>
        <div class="menu-item pt-2.25 pb-px">
         <span class="menu-heading uppercase text-2sm font-medium text-gray-500 ps-[10px] pe-[10px]">
-         User
+         Manajemen Data
         </span>
        </div>
-       <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+       {{-- <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
         <div class="menu-link flex items-center grow cursor-pointer border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" tabindex="0">
          <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
           <i class="ki-filled ki-profile-circle text-lg">
@@ -322,7 +322,7 @@
           </div>
          </div>
         </div>
-       </div>
+       </div> --}}
        <div class="menu-item">
         <a class="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="{{ route('family') }}" tabindex="0">
          <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
@@ -331,6 +331,17 @@
          </span>
          <span class="menu-title text-sm font-medium text-gray-800">
           Keluarga
+         </span>
+        </a>
+       </div>
+       <div class="menu-item">
+        <a class="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="{{ route('member') }}" tabindex="0">
+         <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
+          <i class="ki-filled ki-people text-lg">
+          </i>
+         </span>
+         <span class="menu-title text-sm font-medium text-gray-800">
+          Anggota
          </span>
          <span class="menu-badge me-[-10px]">
           <span class="badge badge-xs">
@@ -341,24 +352,77 @@
        </div>
        <div class="menu-item pt-2.25 pb-px">
         <span class="menu-heading uppercase text-2sm font-medium text-gray-500 ps-[10px] pe-[10px]">
-         Apps
+         Informasi
         </span>
        </div>
        <div class="menu-item">
-        <div class="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="" tabindex="0">
+        <a class="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="{{ route('news') }}" tabindex="0">
          <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
-          <i class="ki-filled ki-users text-lg">
+          <i class="ki-filled ki-book-open text-lg">
           </i>
          </span>
          <span class="menu-title text-sm font-medium text-gray-800">
-          User Management
+          Berita
          </span>
          <span class="menu-badge me-[-10px]">
           <span class="badge badge-xs">
            Soon
           </span>
          </span>
-        </div>
+        </a>
+       </div>
+       <div class="menu-item">
+        <a class="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="{{ route('agenda') }}" tabindex="0">
+         <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
+          <i class="ki-filled ki-calendar text-lg">
+          </i>
+         </span>
+         <span class="menu-title text-sm font-medium text-gray-800">
+          Agenda
+         </span>
+         <span class="menu-badge me-[-10px]">
+          <span class="badge badge-xs">
+           Soon
+          </span>
+         </span>
+        </a>
+       </div>
+       <div class="menu-item">
+        <a class="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="{{ route('faq') }}" tabindex="0">
+         <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
+          <i class="ki-filled ki-question text-lg">
+          </i>
+         </span>
+         <span class="menu-title text-sm font-medium text-gray-800">
+          FAQ
+         </span>
+         <span class="menu-badge me-[-10px]">
+          <span class="badge badge-xs">
+           Soon
+          </span>
+         </span>
+        </a>
+       </div>
+       <div class="menu-item pt-2.25 pb-px">
+        <span class="menu-heading uppercase text-2sm font-medium text-gray-500 ps-[10px] pe-[10px]">
+         Layanan
+        </span>
+       </div>
+       <div class="menu-item">
+        <a class="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="{{ route('submission') }}" tabindex="0">
+         <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
+          <i class="ki-filled ki-directbox-default text-lg">
+          </i>
+         </span>
+         <span class="menu-title text-sm font-medium text-gray-800">
+          Pengajuan
+         </span>
+         <span class="menu-badge me-[-10px]">
+          <span class="badge badge-xs">
+           Soon
+          </span>
+         </span>
+        </a>
        </div>
       </div>
       <!-- End of Sidebar Menu -->
