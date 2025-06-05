@@ -341,7 +341,7 @@
           </i>
          </span>
          <span class="menu-title text-sm font-medium text-gray-800">
-          Anggota
+          Warga
          </span>
          <span class="menu-badge me-[-10px]">
           <span class="badge badge-xs">
@@ -395,11 +395,6 @@
          </span>
          <span class="menu-title text-sm font-medium text-gray-800">
           FAQ
-         </span>
-         <span class="menu-badge me-[-10px]">
-          <span class="badge badge-xs">
-           Soon
-          </span>
          </span>
         </a>
        </div>

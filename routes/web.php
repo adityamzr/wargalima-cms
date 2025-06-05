@@ -26,12 +26,15 @@ Route::middleware('auth')->group(function() {
         Route::get('/', 'index')->name('family');
         Route::get('/create', 'create')->name('family-create');
         Route::post('/create', 'store')->name('family-store');
+        Route::get('/{id}/show', 'show');
         Route::get('/{id}/edit', 'edit');
         Route::put('/{id}/update', 'update')->name('family-update');
         Route::delete('/{id}', 'destroy')->name('family-delete');
 
         // api
         Route::get('/family-datatable', 'dataTable')->name('family-datatable');
+        Route::get('/family-member-datatable/{id}', 'family_member_dataTable')->name('family-member-datatable');
+        // Route::get('/family-list', 'getList')->name('family-list');
     });
 
     Route::prefix('member')->controller(MemberController::class)->group(function(){
